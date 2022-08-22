@@ -3,6 +3,7 @@ package com.kurdestanbootcamp.khanoo.house;
 
 import com.kurdestanbootcamp.khanoo.city.City;
 import com.kurdestanbootcamp.khanoo.common.BaseEntity;
+import com.kurdestanbootcamp.khanoo.file_attachment.FileAttachment;
 import lombok.Data;
 import org.geolatte.geom.G2D;
 import org.geolatte.geom.Point;
@@ -51,6 +52,7 @@ public class House extends BaseEntity {
 
 
 
+
     @NotNull
     @Column(name = "type")
     @Enumerated
@@ -63,7 +65,9 @@ public class House extends BaseEntity {
 
 
    @ManyToOne
+   @JoinColumn(name = "city_id")
     private City city;
+
 
 
 
