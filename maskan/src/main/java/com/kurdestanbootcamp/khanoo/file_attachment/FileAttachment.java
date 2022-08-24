@@ -17,12 +17,9 @@ import javax.validation.constraints.NotNull;
 public class FileAttachment extends BaseEntity {
 
 
-
     @NotNull
     @Column(name = "personal_image")
     private String personalImage;
-
-
 
 
     @ManyToOne
